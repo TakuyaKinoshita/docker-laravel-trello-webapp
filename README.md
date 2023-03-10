@@ -24,7 +24,7 @@ Build a simple laravel development environment with docker-compose. Compatible w
 ```bash
 $ mkdir -p src
 $ docker compose build
-$ UID_GID="$(id -u):$(id -g)" docker compose up -d
+$ docker compose up -d
 $ docker compose exec app composer create-project --prefer-dist laravel/laravel .
 $ docker compose exec app php artisan key:generate
 $ docker compose exec app php artisan storage:link
