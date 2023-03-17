@@ -1,5 +1,4 @@
 install:
-	mkdir -p src
 	@make build
 	@make up
 	docker compose exec app composer install
