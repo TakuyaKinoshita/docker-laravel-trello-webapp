@@ -1,4 +1,5 @@
 install:
+	mkdir -p src
 	@make build
 	@make up
 	docker compose exec app composer install
@@ -10,12 +11,14 @@ install:
 up:
 	docker compose up -d
 build:
-	docker compose build
+	docker compose build --no-cache
 remake:
 	@make destroy
 	@make install
 stop:
 	docker compose stop
+start:
+	docker compose start
 down:
 	docker compose down --remove-orphans
 down-v:
@@ -86,3 +89,5 @@ ide-helper:
 	docker compose exec app php artisan ide-helper:generate
 	docker compose exec app php artisan ide-helper:meta
 	docker compose exec app php artisan ide-helper:models --nowrite
+create-project:
+	docker compose exec app composer create-project --prefer-dist laravel/laravel .
