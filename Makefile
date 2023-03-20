@@ -90,3 +90,5 @@ ide-helper:
 	docker compose exec app php artisan ide-helper:models --nowrite
 create-project:
 	docker compose exec app composer create-project --prefer-dist laravel/laravel .
+start-webpack:
+	docker compose exec app npm run dev
