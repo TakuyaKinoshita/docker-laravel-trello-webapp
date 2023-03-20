@@ -42,3 +42,9 @@ $ composer require laravel/ui
 $ php artisan ui vue
 $ npm install
 ```
+
+1. laravel-mixのインストール
+
+```bash
+$ npm install laravel-mix --save-dev
+```
